@@ -1,25 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlueButterflyRedButterfly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-Of-p8n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="110" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="O0b-gl-2x1" userLabel="one Blue Butterfly">
+                                        <rect key="frame" x="130" y="124" width="75" height="75"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="120" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RedButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="CH1-do-t9U" userLabel="two Red Butterfly">
+                                        <rect key="frame" x="177" y="202" width="50" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="130" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="RLG-uB-z71" userLabel="three Blue Butterfly">
+                                        <rect key="frame" x="227" y="158" width="75" height="75"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="140" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-hl-6wN" userLabel="four Blue Butterfly">
+                                        <rect key="frame" x="310" y="214" width="25" height="25"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="150" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RedButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-ah-JPR" userLabel="five Red Butterfly">
+                                        <rect key="frame" x="318" y="156" width="50" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" tag="160" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RedButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="Jxv-fx-GMb" userLabel="six Red Butterfly">
+                                        <rect key="frame" x="343" y="234" width="25" height="25"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-DY-p3B">
+                                <rect key="frame" x="37" y="250" width="250" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5x-MU-R02">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="FnG-fZ-JcT"/>
+                                            <constraint firstAttribute="width" constant="250" id="nqW-Yt-obj"/>
+                                        </constraints>
+                                        <state key="normal" title="Hide Blue Butterfly"/>
+                                        <connections>
+                                            <action selector="hideBlueButterfly:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJO-bK-OBY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH0-9n-M6y">
+                                        <rect key="frame" x="0.0" y="69" width="250" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Db3-X1-ItW"/>
+                                            <constraint firstAttribute="height" constant="44" id="xgJ-au-OhH"/>
+                                        </constraints>
+                                        <state key="normal" title="Hide Red Butterfly">
+                                            <color key="titleColor" red="0.98431372549999996" green="0.0" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hideRedButterfly:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Vh-uU-iMr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNT-14-OH6">
+                                        <rect key="frame" x="0.0" y="138" width="250" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="8U2-8i-ahY"/>
+                                            <constraint firstAttribute="width" constant="250" id="Zww-ff-2IF"/>
+                                        </constraints>
+                                        <state key="normal" title="Fly Away"/>
+                                        <connections>
+                                            <action selector="flyAwayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nI-GW-Yo9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="kxh-Nd-m49">
+                                <rect key="frame" x="20" y="28" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Mi-SN-RZ9"/>
+                                    <constraint firstAttribute="height" constant="100" id="T8R-pm-oPx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedButterfly" translatesAutoresizingMaskIntoConstraints="NO" id="6Un-28-WG5">
+                                <rect key="frame" x="255" y="28" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Us5-Ds-zCI"/>
+                                    <constraint firstAttribute="width" constant="100" id="a0g-aY-A4T"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.76078431369999999" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fBb-Of-p8n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ht-Pv-eSb"/>
+                            <constraint firstItem="6Un-28-WG5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8hG-eW-Gf4"/>
+                            <constraint firstItem="f4b-DY-p3B" firstAttribute="centerY" secondItem="fBb-Of-p8n" secondAttribute="centerY" id="BY7-7c-UnJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fBb-Of-p8n" secondAttribute="trailing" id="ZWY-g7-crG"/>
+                            <constraint firstItem="f4b-DY-p3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dkF-Y1-Q7h"/>
+                            <constraint firstItem="kxh-Nd-m49" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="eZW-1I-eY8"/>
+                            <constraint firstItem="f4b-DY-p3B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lET-Oe-uGr"/>
+                            <constraint firstItem="6Un-28-WG5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-4" id="q10-iL-Ovf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fBb-Of-p8n" secondAttribute="bottom" id="sX7-jW-2sc"/>
+                            <constraint firstItem="fBb-Of-p8n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t76-Em-KQS"/>
+                            <constraint firstItem="kxh-Nd-m49" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yk4-uy-ddS"/>
+                            <constraint firstItem="f4b-DY-p3B" firstAttribute="centerY" secondItem="fBb-Of-p8n" secondAttribute="centerY" id="zGs-Kq-UGl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zGs-Kq-UGl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueButterfly" destination="kxh-Nd-m49" id="yUG-0Y-cjs"/>
+                        <outlet property="blueButterflyHeight" destination="T8R-pm-oPx" id="AaB-MC-F4Z"/>
+                        <outlet property="blueButterflyWidth" destination="1Mi-SN-RZ9" id="Ao0-s1-1dK"/>
+                        <outlet property="hideBlueButterflyButton" destination="G5x-MU-R02" id="A7J-UK-GlR"/>
+                        <outlet property="hideRedButterflyButton" destination="jH0-9n-M6y" id="TPD-Px-6rX"/>
+                        <outlet property="leadingConstraint" destination="eZW-1I-eY8" id="fyT-7f-0k0"/>
+                        <outlet property="redButterfly" destination="6Un-28-WG5" id="hUe-sy-iJq"/>
+                        <outlet property="topConstraint" destination="yk4-uy-ddS" id="Ssa-FB-MQi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="284.5" y="302.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BlueButterfly" width="100" height="100"/>
+        <image name="RedButterfly" width="100" height="100"/>
+    </resources>
 </document>
